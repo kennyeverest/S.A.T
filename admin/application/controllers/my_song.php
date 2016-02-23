@@ -1,0 +1,17 @@
+<?php
+
+class My_Song extends CI_Controller
+{
+	public function index()
+	{
+		$this->load->helper('url');
+		
+		$this->load->view('/mysong/mysong_nav');
+		
+		$this->load->view('/mysong/song_header');
+		
+		$this->load->view('/mysong/mysong_section');
+		
+		$this->load->view('/mysong/mysong_footer');
+	}
+}
