@@ -26,9 +26,8 @@
 
   <body >
   
-	<div class="header">
+	<div class="header"></div>
 
-	</div>
 	<div class="tengah">
 	<div class="row "  >
 	<div class="col-sm-4" ></div>
@@ -49,9 +48,7 @@
 	</div>
     </div> 
     </div><!-- /container -->
-<div class="footer">
-
-	</div>
+<div class="footer"></div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
