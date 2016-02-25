@@ -56,7 +56,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="http://localhost/codeigniter/index.php/c_login">Login</a>
+                      <a href="<?php echo base_url().'index.php/c_login';?>">Login</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
