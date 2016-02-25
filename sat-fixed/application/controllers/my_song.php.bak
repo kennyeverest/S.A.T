@@ -10,8 +10,10 @@ class My_Song extends CI_Controller
 		
 		$this->load->view('/mysong/song_header');
 		
-		//$this->load->view('/mysong/mysong_section');
+		$this->load->view('/mysong/mysong_section');
 		
 		$this->load->view('/mysong/mysong_footer');
 	}
+	
+	
 }
