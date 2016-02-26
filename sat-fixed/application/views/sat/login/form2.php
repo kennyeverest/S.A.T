@@ -39,8 +39,8 @@
 	<div class="col-sm-4" ></div>
 	<div class="col-sm-4" style="padding:30px">
     <?php
-  	$attribut = array( 'role' => 'form','class' => 'form-horizontal'
-						,"onsubmit" => "return cek();");
+  	$attribut = array( 'role' => 'form','class' => 'form-horizontal','id' => 'myform'
+  	,"onsubmit" => "return cek();");
   	echo form_open($aksi,$attribut);
   	?>
         <h2 class="form-signin-heading text-center" style="color:Black   ">Sistem Absensi Tutorial</h2><br>
@@ -64,7 +64,7 @@
             <input type="checkbox" value="remember-me" > Remember me
           </label>
         </div><br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
       <?php
   echo form_close();
   ?>
@@ -79,9 +79,12 @@
 	//echo $warn;
 	if(strcmp($warn,'salah')==0)
 	{
-		echo '<div class="alert alert-danger fade in">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Peringatan!</strong>'.'NIM atau password salah'.'</div>';
+		echo '<div class="alert alert-danger fade in">';
+		echo "</br>";
+		echo '<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>';
+		echo "<strong>".$salah."</strong>";
+		echo "</br>";
+		echo "</div>";
 	}
 	
 	
@@ -90,25 +93,25 @@
 	?>
 	</div>
 	
-	<div class="alert alert-warning fade in" id="warning" style="display:none">
+	<div class="alert alert-warning fade in" style="display:none" id="warning">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>Peringatan!</strong> Kolom tidak boleh ada yang kosong 
+    <strong>Maaf!</strong> Tidak ada kolom yang boleh kosong
   </div>
-  
-  <script>
-  function cek()
-  {	
-		var username = document.getElementById("nim").value;
-		var password = document.getElementById("password").value;
-		
-		if(username == "" && password == ""){
-	  document.getElementById("warning").style.display="block";
-		return false;
+
+	
+	<script>
+		function cek()
+		{
+			
+			if(document.getElementById('nim').value=="" && document.getElementById('password').value==""){	
+			document.getElementById('warning').style.display="block";
+			return false;
+		}	
+			return true;
+					
 		}
-	  return true;
-  }
-  </script>
-  
+
+	</script>
 <div class="footer"></div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
