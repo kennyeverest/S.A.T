@@ -39,7 +39,8 @@
 	<div class="col-sm-4" ></div>
 	<div class="col-sm-4" style="padding:30px">
     <?php
-  	$attribut = array( 'role' => 'form','class' => 'form-horizontal');
+  	$attribut = array( 'role' => 'form','class' => 'form-horizontal'
+						,"onsubmit" => "return cek();");
   	echo form_open($aksi,$attribut);
   	?>
         <h2 class="form-signin-heading text-center" style="color:Black   ">Sistem Absensi Tutorial</h2><br>
@@ -78,17 +79,36 @@
 	//echo $warn;
 	if(strcmp($warn,'salah')==0)
 	{
-		echo '<div class="alert alert-danger" id="salah">';
-		echo "</br>";
-		echo "<strong>".$salah."</strong>";
-		echo "</br>";
-		echo "</div>";
+		echo '<div class="alert alert-danger fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Peringatan!</strong>'.'NIM atau password salah'.'</div>';
 	}
 	
 	
 	
 	}
 	?>
+	</div>
+	
+	<div class="alert alert-warning fade in" id="warning" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Peringatan!</strong> Kolom tidak boleh ada yang kosong 
+  </div>
+  
+  <script>
+  function cek()
+  {	
+		var username = document.getElementById("nim").value;
+		var password = document.getElementById("password").value;
+		
+		if(username == "" && password == ""){
+	  document.getElementById("warning").style.display="block";
+		return false;
+		}
+	  return true;
+  }
+  </script>
+  
 <div class="footer"></div>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
