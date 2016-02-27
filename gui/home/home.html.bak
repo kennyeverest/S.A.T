@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+	body{
+		background-color: lightSeaGreen ;
+	}
+  tr{
+    background-color: white;
+  }
+  th{
+    text-align: center;
+  }
+  .col-sm-4{
+    float: right ;
+  }
+  </style>
+  </head>
+
+  <body >
+
+<div class="container ">
+  <h2 >Tuttoring : </h2>          
+  <table class="table table-bordered text-center">
+    <thead >
+      <tr class="info" >
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Absen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>081411631000</td>
+        <td>Doe</td>
+        <td><input type="checkbox" value="absen" ></td>
+      </tr>
+      <tr>
+        <td>0814116310999</td>
+        <td>Moe</td>
+        <td><input type="checkbox" value="absen" ></td>
+      </tr>
+      
+    </tbody>
+  </table>
+    <div class="row "  >
+  <div class="col-sm-8" ></div>
+  <div class="col-sm-4  " >
+    <button type="button" class="btn btn-default btn-lg">Simpan</button>
+    <button type="button" class="btn btn-default btn-lg">Batal</button>
+    </div>
+
+</div>
+	
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

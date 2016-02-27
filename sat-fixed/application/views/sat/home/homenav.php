@@ -1,4 +1,4 @@
-<html lang="en">
+
 <head>
   <title>Sistem Absen Tutorial</title>
   <meta charset="utf-8">
@@ -25,8 +25,8 @@
       <li class="active"><a href="<?php echo base_url()?>index.php/home">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Input<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Input Mahasiswa</a></li>
-          <li><a href=" <?php echo base_url()?>index.php/inputmk">Input Mata Kuliah</a></li>
+          <li><a href="<?php echo base_url()?>index.php/inputmhs">Input Mahasiswa</a></li>
+          <li><a href="<?php echo base_url()?>index.php/inputmk">Input Mata Kuliah</a></li>
           <li><a href="#">Input Penutor</a></li>
         </ul>
       </li>

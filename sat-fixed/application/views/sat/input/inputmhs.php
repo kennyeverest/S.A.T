@@ -1,4 +1,3 @@
-
 <style>
 	tengah{
   margin: auto;
@@ -20,13 +19,12 @@ margin: auto;
 	}
  
 	</style>
-</head>
-<body>
+
  
 <div class="container " id="test" >
   
   <div class="panel panel-info">
-    <div class="panel-heading" id="judul">Input Mata Kuliah</div>
+    <div class="panel-heading" id="judul">Input Mahasiswa</div>
     <div class="panel-body">
     	<div class="header"></div>
 	
@@ -42,9 +40,9 @@ margin: auto;
 	
 		<div class="form-group clearfix" >
 	
-		<input type="text" class="form-control" name="kodemk" id="kodemk" placeholder="Kode Mata Kuliah" required autofocus>
+		<input type="text" class="form-control" name="nim" id="nim" placeholder="NIM" required autofocus>
 		<br>
-		<input type="text" class="form-control" name="mk" id="mk" placeholder="Nama Mata Kuliah" required autofocus>
+		<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Mahasiswa" required autofocus>
 		</label><br>
 		<div class="col-sm-4">
 		
@@ -82,8 +80,8 @@ margin: auto;
 <script>
 	function bersihkan()
 	{
-		document.getElementById('kodemk').value="";
-		document.getElementById('mk').value="";
+		document.getElementById('nim').value="";
+		document.getElementById('nama').value="";
 	}
 </script>
 
