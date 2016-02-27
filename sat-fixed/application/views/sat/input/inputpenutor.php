@@ -25,7 +25,7 @@ margin: auto;
 <div class="container " id="test" >
   
   <div class="panel panel-info">
-    <div class="panel-heading" id="judul">Input Mata Kuliah</div>
+    <div class="panel-heading" id="judul">Input Penutor</div>
     <div class="panel-body">
     	<div class="header"></div>
 	
@@ -41,10 +41,12 @@ margin: auto;
 	
 		<div class="form-group clearfix" >
 	
-		<input type="text" class="form-control" name="kodemk" id="kodemk" placeholder="Kode Mata Kuliah" required autofocus>
+		<input type="text" class="form-control" name="nim" id="nim" placeholder="NIM" required autofocus>
 		<br>
-		<input type="text" class="form-control" name="mk" id="mk" placeholder="Nama Mata Kuliah" required autofocus>
-		</label><br>
+		<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Penutor" required autofocus>
+		<br>
+		<input type="text" class="form-control" name="password" id="password" placeholder="Password" required autofocus>
+		<br>
 		<div class="col-sm-4">
 		
 		</div>
@@ -81,8 +83,9 @@ margin: auto;
 <script>
 	function bersihkan()
 	{
-		document.getElementById('kodemk').value="";
-		document.getElementById('mk').value="";
+		document.getElementById('nim').value="";
+		document.getElementById('nama').value="";
+		document.getElementById('password').value="";
 	}
 </script>
 

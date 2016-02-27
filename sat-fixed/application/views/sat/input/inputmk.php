@@ -44,7 +44,7 @@ margin: auto;
 		<input type="text" class="form-control" name="kodemk" id="kodemk" placeholder="Kode Mata Kuliah" required autofocus>
 		<br>
 		<input type="text" class="form-control" name="mk" id="mk" placeholder="Nama Mata Kuliah" required autofocus>
-		</label><br>
+		<br>
 		<div class="col-sm-4">
 		
 		</div>
