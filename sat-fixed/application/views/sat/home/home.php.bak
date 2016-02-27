@@ -35,7 +35,7 @@
         <ul class="dropdown-menu">
           <li><a href="<?php echo base_url()?>index.php/viewmhs">Data Mahasiswa</a></li>
           <li><a href="#">Data Absensi</a></li>
-          <li><a href="#">Data Mata Kuliah</a></li>
+          <li><a href="<?php echo base_url()?>index.php/viewmk">Data Mata Kuliah</a></li>
         </ul>
       </li>
     </ul>

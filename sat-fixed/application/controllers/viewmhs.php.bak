@@ -21,7 +21,7 @@ class ViewMhs extends CI_Controller
 		$this->table->set_template($atur);
 		$tabel = $this->table->generate($hasil);
 		$data['tabel'] = $tabel;
-		$this->load->view('/sat/tabel/nav');
+		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewmhs',$data);
 	}
 }

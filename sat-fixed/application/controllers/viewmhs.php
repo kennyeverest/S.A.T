@@ -15,8 +15,7 @@ class ViewMhs extends CI_Controller
 	{
 		$this->load->model('/tabel/mahasiswamodel');
 		$hasil = $this->mahasiswamodel->getAll();
-		$atur = array( 'table_open' => '<table  class="table table-striped table-condensed"  cellpadding="5" cellspacing="0">',
-		'cell_start' => '<td style="width:10%">' );
+		$atur = array( 'table_open' => '<table  class="table table-striped table-condensed"  cellpadding="5" cellspacing="0">');
 		$this->table->set_heading('NIM', 'Nama Mahasiswa');
 		$this->table->set_template($atur);
 		$tabel = $this->table->generate($hasil);
