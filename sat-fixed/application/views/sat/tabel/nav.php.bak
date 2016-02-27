@@ -12,6 +12,14 @@
       width: 70%;
       margin: auto;
   }
+  
+  table {
+  table-layout:fixed;
+  }
+  
+  th{
+  width:50px;
+  }
   </style>
 </head>
 <body>
@@ -43,4 +51,3 @@
     </ul>
   </div>
 </nav>
-  

@@ -15,7 +15,7 @@ class MahasiswaModel extends CI_Model
 	
 	public function insert($data)
 	{
-		$this->db->insert($data);
+		$this->db->insert('mahasiswa',$data);
 		return $this->db->affected_rows();
 	}
 	
