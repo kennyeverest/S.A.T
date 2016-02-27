@@ -17,5 +17,6 @@ class MataKuliahModel extends CI_Model
 	public function insert($data)
 	{
 		$this->db->insert('mata_kuliah',$data);	
+		return $this->db->affected_rows();
 	}
 }

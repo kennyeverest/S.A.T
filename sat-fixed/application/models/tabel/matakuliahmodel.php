@@ -14,6 +14,13 @@ class MataKuliahModel extends CI_Model
 		$this->load->database($config);
 	}
 	
+	public function getAll()
+	{
+		$sql = 'SELECT * FROM mata_kuliah';
+		$hasil = $this->db->query($sql);
+		return $hasil;	
+	}
+	
 	public function insert($data)
 	{
 		$this->db->insert('mata_kuliah',$data);	
