@@ -1,7 +1,7 @@
 # SAT
 Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 
-Panduan install :
+#Panduan install :
 
 1. Sebelumnya, import dulu script sql
 
@@ -9,7 +9,7 @@ Panduan install :
 
 3. Ganti semua method __construct pada applications/models/ sebelum melakukan instalasi
  
-3. Pada file tersebut, dalam method __construct(), ganti seperlunya pada bagian $config
+4. Pada file tersebut, dalam method __construct(), ganti seperlunya pada bagian $config
 	 Bagian yang diganti pada config :
 	 
 	 	$config['hostname'] = "localhost"; --> Definisikan hostname anda

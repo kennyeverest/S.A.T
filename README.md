@@ -24,7 +24,7 @@ Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 
 4. Copy folder sat-fixed ke directory htdocs
 
-5. Buka browser, ketik url : localhost/sat-fixed/index.php/sat
+5. Buka browser, ketik url : localhost/sat-fixed/
 
 
 
