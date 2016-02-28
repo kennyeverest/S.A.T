@@ -1,7 +1,7 @@
 # SAT
 Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 
-Panduan install :
+#Panduan install :
 
 1. Sebelumnya, import dulu script sql
 
