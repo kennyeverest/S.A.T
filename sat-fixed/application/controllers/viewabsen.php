@@ -1,12 +1,7 @@
 <?php
 
-/**
-Class CI_Controller untuk view viewabsen.php
-**/
-
 class ViewAbsen extends CI_Controller
 {
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -15,12 +10,9 @@ class ViewAbsen extends CI_Controller
 		$this->load->helper('url');
 		$this->load->helper('html');
 		$this->load->helper('text');
+		$this->load->library('session');
 	}
-	/**
-	function untuk menampilkan html tabel sesuai dengan tabel mahasiswa + checkbox
-	parameter		:none
-	return type	:void
- 	**/
+
 	public function index()
 	{
 		$this->load->model('/tabel/mahasiswamodel');
@@ -30,8 +22,8 @@ class ViewAbsen extends CI_Controller
 		$this->table->set_heading('NIM','Nama Mahasiswa','Absen');
 		$this->table->set_template($atur);
 		foreach ($hasil->result_array() as $row) {
-			 	$c = '<input type="checkbox" name="';
-			 	$f = $row['nim'];
+			 	$c = '<input type="checkbox" name="nim[';
+			 	$f = $row['nim']."]";
 			 	$z = $c.$f.'" value="1">';
 			 	$this->table->add_row($row['nim'],$row['nama_mhs'],$z);
 			}
@@ -39,30 +31,32 @@ class ViewAbsen extends CI_Controller
 		$tabel = $this->table->generate();
 		$data['tabel'] = $tabel;
 		$data['aksi'] = 'viewabsen/simpan';
+	 	$id = $this->session->userdata("username");
+		$data['taught'] = $this->getTaught($id);
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewabsen',$data);
 	}
 
-	/**
-	Test function to get  $_POST
-	**/
-
+public function getTaught($username)
+{
+	# code...
+	$this->load->model('/tabel/mkhaspenutor');
+	$hasil = $this->mkhaspenutor->getAll();
+	$myMk = array();
+	$puter = 0;
+	foreach ($hasil->result_array() as $row) {
+		# code...
+		if(strcmp($row['penutor_nim_penutor'],$username)==0)
+		{
+			$myMk[$puter++] = $row['mata_kuliah_id_mk'];
+		}
+	}
+	return $myMk;
+}
 	public function simpan()
 	{
 
 		$arr = $_POST;
-		//print_r($arr);
-		$x = array();
-		$puter = 0;
-	while($value = current($arr))
-	{
-		$x[$puter++] = key($arr);
-		next($arr);
-	}
-
-		foreach ($x as $value2) {
-		 	 // loop through values
-		 	 echo $value2."</br>";
-		}
+		print_r($arr);
 	}
 }

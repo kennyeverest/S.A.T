@@ -1,17 +1,7 @@
 <?php
 
-/**
-Class CI_Controller untuk view viewmk.php
-**/
-
 class ViewMk extends CI_Controller
 {
-
-	/**
-	No-arg constructor
-	fungsi : load helper dan library
-	**/
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -21,14 +11,7 @@ class ViewMk extends CI_Controller
 		$this->load->helper('text');
 		$this->load->library('table');
 	}
-
-	/**
-	function untuk menampilkan html table sesuai dengan tabel mata_kuliah dalam
-	viewmk.php
-	parameter 	: none
-	return type	: void
-	**/
-
+	
 	public function index()
 	{
 		$this->load->model('/tabel/matakuliahmodel');

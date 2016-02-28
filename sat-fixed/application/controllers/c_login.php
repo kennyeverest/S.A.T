@@ -1,16 +1,7 @@
 <?php
 
-/**
-Class CI_Controller untuk view form2.php
-**/
-
 class c_login extends CI_Controller
 {
-	/**
-	No-arg constructor
-	fungsi : load helper dan library
-	**/
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -21,22 +12,10 @@ class c_login extends CI_Controller
 		$this->load->library('table');
 	}
 
-	/**
-	Function untuk memanggil function tampilForm
-	parameter 	: none
-	return type	: void
-	**/
-
 	public function index()
 	{
 		$this->tampilForm();
 	}
-
-	/**
-	Function untuk menampilkan form dan menampilkan home jika login sukses
-	parameter 	: none
-	return type	: void
-	**/
 
 	private function tampilForm()
 		{
@@ -71,8 +50,9 @@ class c_login extends CI_Controller
 
 			  		else
 			  		{
+							$this->session->set_userdata("username",$username);
 			  			redirect('home');
-
+			  			
 			  		}
 
 
@@ -82,11 +62,6 @@ class c_login extends CI_Controller
 
 		}
 
-		/**
-		function untuk melakukan proses autentikasi login
-		parameter : $username : string, $password:string, $hasil : sql object type
-		return : boolean (true : login sukses, false : login gagal)
-		**/
 		private function cekUser($username, $password, $hasil)
 		{
 			foreach ($hasil->result_array() as $row) {

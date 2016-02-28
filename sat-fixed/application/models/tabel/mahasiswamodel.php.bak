@@ -13,13 +13,6 @@ class MahasiswaModel extends CI_Model
 		$this->load->database($config);
 	}
 	
-	public function getAll()
-	{
-		$sql = 'SELECT * FROM mahasiswa';
-		$hasil = $this->db->query($sql);
-		return $hasil;
-	}
-	
 	public function insert($data)
 	{
 		$this->db->insert('mahasiswa',$data);

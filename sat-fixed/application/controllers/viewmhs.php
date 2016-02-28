@@ -1,16 +1,7 @@
 <?php
 
-/**
-Class CI_Controller untuk view viewmhs.php
-**/
-
 class ViewMhs extends CI_Controller
 {
-	/**
-	No-arg constructor
-	fungsi : load helper dan library
-	**/
-
 	public function __construct()
 	{
 		parent::__construct();
@@ -19,14 +10,7 @@ class ViewMhs extends CI_Controller
 		$this->load->helper('text');
 		$this->load->library('table');
 	}
-
-	/**
-	function untuk menampilkan html table sesuai dengan tabel Mahasiswa dalam
-	viewmhs.php
-	parameter 	: none
-	return type	: void
-	**/
-
+	
 	public function index()
 	{
 		$this->load->model('/tabel/mahasiswamodel');
@@ -39,5 +23,4 @@ class ViewMhs extends CI_Controller
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewmhs',$data);
 	}
-
 }
