@@ -1,7 +1,16 @@
 <?php
 
+/**
+Class CI_Controller untuk view inputmk.php
+**/
+
 class InputMK extends CI_Controller
 {
+	/**
+	No-arg constructor
+	fungsi : load helper dan library
+	**/
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -9,10 +18,17 @@ class InputMK extends CI_Controller
 		$this->load->helper('url');
 		$this->load->helper('html');
 	}
-	
+
+	/**
+	Function untuk load view inputmk.php jika kolom $kodemk dan $nama_mk masih kosong,
+	selain itu akan memanggil function insertTo_Mk
+	parameter 	: none
+	return type	: void
+	**/
+
 	public function index()
 	{
-		
+
 		$kode = $this->input->post('kodemk');
 		$namamk = $this->input->post('mk');
 		$data['aksi'] = 'inputmk';
@@ -21,18 +37,24 @@ class InputMK extends CI_Controller
 
 		{
 			$this->load->view('/sat/home/homenav');
-			$this->load->view('/sat/input/inputmk',$data);	
+			$this->load->view('/sat/input/inputmk',$data);
 		}
-		
+
 		else
 		{
 			$tmp['id_mk'] = $kode;
 			$tmp['nama_mk'] = $namamk;
 			$this->insertTo_MK($tmp);
 		}
-		
+
 	}
-	
+
+	/**
+	Function untuk melakukan send data ke matakuliahmodel
+	parameter 	: $data : assoc array (indeks sesuai tabel mata_kuliah)
+	return type	: void
+	**/
+
 	public function insertTo_MK($data)
 	{
 		//echo $data['pesan'];
@@ -44,10 +66,11 @@ class InputMK extends CI_Controller
 		}
 		else
 			$flag = 2;
-			
+
 		$data['aksi'] = 'inputmk';
 		$data['flag'] = $flag;
-		$this->load->view('/sat/home/homenav');	
+		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/input/inputmk',$data);
 	}
+
 }

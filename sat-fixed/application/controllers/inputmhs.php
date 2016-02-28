@@ -1,7 +1,16 @@
 <?php
 
+/**
+Class CI_Controller untuk view inputmhs.php
+**/
+
 class InputMhs extends CI_Controller
 {
+	/**
+	No-arg constructor
+	fungsi : load helper dan library
+	**/
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -10,7 +19,14 @@ class InputMhs extends CI_Controller
 		$this->load->helper('html');
 		$this->load->helper('text');
 	}
-	
+
+	/**
+	Function untuk load view inputmhs.php jika kolom $nim dan $nama masih kosong,
+	selain itu akan memanggil function insertTo_Mhs
+	parameter 	: none
+	return type	: void
+	**/
+
 	public function index()
 	{
 		$nim = $this->input->post('nim');
@@ -21,9 +37,9 @@ class InputMhs extends CI_Controller
 
 		{
 			$this->load->view('/sat/home/homenav');
-			$this->load->view('/sat/input/inputmhs',$data);	
+			$this->load->view('/sat/input/inputmhs',$data);
 		}
-		
+
 		else
 		{
 			$tmp['nim'] = $nim;
@@ -31,7 +47,14 @@ class InputMhs extends CI_Controller
 			$this->insertTo_Mhs($tmp);
 		}
 	}
-	
+
+	/**
+	Function untuk melakukan send data ke mahasiswamodel
+	parameter 	: $data : assoc array (indeks sesuai tabel mahasiswa)
+	return type	: void
+	**/
+
+
 	public function insertTo_Mhs($data)
 	{
 		//echo $data['pesan'];
@@ -43,12 +66,12 @@ class InputMhs extends CI_Controller
 		}
 		else
 			$flag = 2;
-			
+
 		$data['aksi'] = 'inputmhs';
 		$data['flag'] = $flag;
-		$this->load->view('/sat/home/homenav');	
+		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/input/inputmhs',$data);
 	}
-	
-	
+
+
 }

@@ -1,7 +1,12 @@
 <?php
 
+/**
+Class CI_Controller untuk view viewabsen.php
+**/
+
 class ViewAbsen extends CI_Controller
 {
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -11,12 +16,16 @@ class ViewAbsen extends CI_Controller
 		$this->load->helper('html');
 		$this->load->helper('text');
 	}
-	
+	/**
+	function untuk menampilkan html tabel sesuai dengan tabel mahasiswa + checkbox
+	parameter		:none
+	return type	:void
+ 	**/
 	public function index()
 	{
 		$this->load->model('/tabel/mahasiswamodel');
 		$hasil = $this->mahasiswamodel->getAll();
-		
+
 		$atur = array( 'table_open' => '<table  class="table table-striped table-condensed"  cellpadding="5" cellspacing="0">');
 		$this->table->set_heading('NIM','Nama Mahasiswa','Absen');
 		$this->table->set_template($atur);
@@ -26,17 +35,21 @@ class ViewAbsen extends CI_Controller
 			 	$z = $c.$f.'" value="1">';
 			 	$this->table->add_row($row['nim'],$row['nama_mhs'],$z);
 			}
-			
+
 		$tabel = $this->table->generate();
 		$data['tabel'] = $tabel;
 		$data['aksi'] = 'viewabsen/simpan';
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewabsen',$data);
 	}
-	
+
+	/**
+	Test function to get  $_POST
+	**/
+
 	public function simpan()
 	{
-		
+
 		$arr = $_POST;
 		//print_r($arr);
 		$x = array();
@@ -46,10 +59,10 @@ class ViewAbsen extends CI_Controller
 		$x[$puter++] = key($arr);
 		next($arr);
 	}
-		
+
 		foreach ($x as $value2) {
 		 	 // loop through values
-		 	 echo $value2."</br>"; 
-		}    
+		 	 echo $value2."</br>";
+		}
 	}
 }

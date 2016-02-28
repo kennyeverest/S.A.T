@@ -1,19 +1,7 @@
 <?php
 
-/**
-Class model untuk login
-**/
-
 class Login_Baru extends CI_Model
 {
-	
-	/**
-	Function untuk menentukan format tampilan form
-	modifier 			: public
-	parameter			: none
-	return type		: assoc array untuk format tampilan form
-	**/
-	
 	public function formUser()
 	{
 		$data['aksi'] = 'c_login/tampilForm';
@@ -35,5 +23,4 @@ class Login_Baru extends CI_Model
 			    
 			    return $auser;
 	}
-	
 }
