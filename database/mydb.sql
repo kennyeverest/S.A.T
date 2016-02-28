@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2016 at 09:23 AM
--- Server version: 5.6.26
+-- Generation Time: 28 Feb 2016 pada 04.52
+-- Versi Server: 5.6.21-log
 -- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `absen`
+-- Struktur dari tabel `absen`
 --
 
 CREATE TABLE IF NOT EXISTS `absen` (
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `absen` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
+-- Struktur dari tabel `mahasiswa`
 --
 
 CREATE TABLE IF NOT EXISTS `mahasiswa` (
@@ -44,10 +44,18 @@ CREATE TABLE IF NOT EXISTS `mahasiswa` (
   `nama_mhs` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data untuk tabel `mahasiswa`
+--
+
+INSERT INTO `mahasiswa` (`nim`, `nama_mhs`) VALUES
+('081211633010', 'Fiska Audi Meiyani'),
+('081211731008', 'Dewa Ayu Githa Maharani Supartha');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa_has_mata_kuliah`
+-- Struktur dari tabel `mahasiswa_has_mata_kuliah`
 --
 
 CREATE TABLE IF NOT EXISTS `mahasiswa_has_mata_kuliah` (
@@ -58,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `mahasiswa_has_mata_kuliah` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mata_kuliah`
+-- Struktur dari tabel `mata_kuliah`
 --
 
 CREATE TABLE IF NOT EXISTS `mata_kuliah` (
@@ -66,10 +74,17 @@ CREATE TABLE IF NOT EXISTS `mata_kuliah` (
   `nama_mk` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data untuk tabel `mata_kuliah`
+--
+
+INSERT INTO `mata_kuliah` (`id_mk`, `nama_mk`) VALUES
+('SIP100', 'Algoritma dan Pemrograman');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mata_kuliah_has_penutor`
+-- Struktur dari tabel `mata_kuliah_has_penutor`
 --
 
 CREATE TABLE IF NOT EXISTS `mata_kuliah_has_penutor` (
@@ -80,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `mata_kuliah_has_penutor` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penutor`
+-- Struktur dari tabel `penutor`
 --
 
 CREATE TABLE IF NOT EXISTS `penutor` (
@@ -90,10 +105,12 @@ CREATE TABLE IF NOT EXISTS `penutor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `penutor`
+-- Dumping data untuk tabel `penutor`
 --
 
 INSERT INTO `penutor` (`nim_penutor`, `nama_penutor`, `password`) VALUES
+('081411631016', 'Zafitra Ramadani', 'zafitra'),
+('081411631022', 'Shinyo', 'wow'),
 ('081411631044', 'Kenny', 'ganteng');
 
 --
@@ -142,24 +159,24 @@ ALTER TABLE `penutor`
   ADD PRIMARY KEY (`nim_penutor`);
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `absen`
+-- Ketidakleluasaan untuk tabel `absen`
 --
 ALTER TABLE `absen`
   ADD CONSTRAINT `fk_absen_mahasiswa_has_mata_kuliah1` FOREIGN KEY (`mahasiswa_has_mata_kuliah_mahasiswa_nim`, `mahasiswa_has_mata_kuliah_mata_kuliah_id_mk`) REFERENCES `mahasiswa_has_mata_kuliah` (`mahasiswa_nim`, `mata_kuliah_id_mk`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `mahasiswa_has_mata_kuliah`
+-- Ketidakleluasaan untuk tabel `mahasiswa_has_mata_kuliah`
 --
 ALTER TABLE `mahasiswa_has_mata_kuliah`
   ADD CONSTRAINT `fk_mahasiswa_has_mata_kuliah_mahasiswa` FOREIGN KEY (`mahasiswa_nim`) REFERENCES `mahasiswa` (`nim`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_mahasiswa_has_mata_kuliah_mata_kuliah1` FOREIGN KEY (`mata_kuliah_id_mk`) REFERENCES `mata_kuliah` (`id_mk`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `mata_kuliah_has_penutor`
+-- Ketidakleluasaan untuk tabel `mata_kuliah_has_penutor`
 --
 ALTER TABLE `mata_kuliah_has_penutor`
   ADD CONSTRAINT `fk_mata_kuliah_has_penutor_mata_kuliah1` FOREIGN KEY (`mata_kuliah_id_mk`) REFERENCES `mata_kuliah` (`id_mk`) ON DELETE NO ACTION ON UPDATE NO ACTION,
