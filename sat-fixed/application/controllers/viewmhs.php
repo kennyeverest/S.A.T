@@ -2,11 +2,13 @@
 
 class ViewMhs extends CI_Controller
 {
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->helper('html');
+		$this->load->helper('date');
 		$this->load->helper('text');
 		$this->load->library('table');
 	}
@@ -20,7 +22,14 @@ class ViewMhs extends CI_Controller
 		$this->table->set_template($atur);
 		$tabel = $this->table->generate($hasil);
 		$data['tabel'] = $tabel;
+		$data['hari']= $this->hari(date('w'));
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewmhs',$data);
+	}
+	public function hari ($hari=-1)
+	{
+		$ahari= array("Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu");
+		$rtrn=(($hari>=0)&&($hari<=6))?$ahari[$hari]:false;
+		return $rtrn;
 	}
 }

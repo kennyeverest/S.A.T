@@ -48,7 +48,7 @@ public function getTaught($username)
 		# code...
 		if(strcmp($row['penutor_nim_penutor'],$username)==0)
 		{
-			$myMk[$puter++] = $row['mata_kuliah_id_mk'];
+			$myMk[$puter++] = $row['nama_mk'];
 		}
 	}
 	return $myMk;

@@ -44,16 +44,14 @@ margin: auto;
 		<br>
 		<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Mahasiswa" required autofocus>
 		</label><br>
-		<div class="col-sm-4">
+		<div class="row">
+		<div class="col-sm-3"></div>
 		
-		</div>
+		<div class="col-sm-9">
 		<button class="btn btn-success btn-md" type="submit" >Simpan</button>
 		
-			
-		<div class="col-sm-3">
-		</div>
 		<button class="btn btn-danger btn-md" type="button" onclick="bersihkan()">Batal</button>	
-		
+		</div></div>
 		
 		
 	<?php form_close(); ?>

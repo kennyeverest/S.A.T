@@ -53,8 +53,12 @@ Mata Kuliah Yang ditutorkan
 				}
 			 ?>
     </div>
-</div>
-<div class="col-sm-7"></div>
+    <br>
+
+    <div class="row">
+		<div class="col-sm-1"></div>
+		
+		<div class="col-sm-11">
     <button type="submit" class="btn btn-success">
 
     <span class="glyphicon glyphicon-floppy-saved"></span> Simpan!
@@ -62,9 +66,9 @@ Mata Kuliah Yang ditutorkan
     <button type="button" class="btn btn-danger">
     	 <span class="glyphicon glyphicon-remove"></span>Batal !
     </button>
+        </div></div>
 
-
-
+</div>
   </form>
   </div>
 		</div>
