@@ -10,7 +10,7 @@ class Penutor extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "mydb";
 		$config['username'] = 'root';
-		$config['password'] = '';
+		$config['password'] = 'kenny';
 		
 		$this->load->database($config);
 		

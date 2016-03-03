@@ -9,9 +9,16 @@ class MataKuliahModel extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "mydb";
 		$config['username'] = 'root';
-		$config['password'] = 'kenny';
+		$config['password'] = '';
 		
 		$this->load->database($config);
+	}
+	
+	public function getAll()
+	{
+		$sql = 'SELECT * FROM mata_kuliah';
+		$hasil = $this->db->query($sql);
+		return $hasil;	
 	}
 	
 	public function insert($data)

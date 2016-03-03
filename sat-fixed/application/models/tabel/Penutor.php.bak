@@ -10,7 +10,7 @@ class Penutor extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "mydb";
 		$config['username'] = 'root';
-		$config['password'] = 'kenny';
+		$config['password'] = '';
 		
 		$this->load->database($config);
 		
@@ -21,6 +21,12 @@ class Penutor extends CI_Model
 		$sql = 'SELECT nim_penutor, password FROM penutor';
 		$hasil = $this->db->query($sql);
 		return $hasil;
+	}
+	
+	public function insert($data)
+	{
+		$this->db->insert('penutor',$data);
+		return $this->db->affected_rows();
 	}
 	
 }

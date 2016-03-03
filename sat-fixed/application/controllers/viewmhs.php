@@ -23,7 +23,6 @@ class ViewMhs extends CI_Controller
 		$tabel = $this->table->generate($hasil);
 		$data['tabel'] = $tabel;
 		$data['hari']= $this->hari(date('w'));
-		$data['tanggal']= $this->tanggal();
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/output/viewmhs',$data);
 	}
@@ -32,26 +31,5 @@ class ViewMhs extends CI_Controller
 		$ahari= array("Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu");
 		$rtrn=(($hari>=0)&&($hari<=6))?$ahari[$hari]:false;
 		return $rtrn;
-	}
-	public function tanggal (){
-		$tgl=array(
-                "01"=>"Januari",
-                "02"=>"Februari",
-                "03"=>"Maret",
-                "04"=>"April",
-                "05"=>"Mei",
-                "06"=>"Juni",
-                "07"=>"Juli",
-                "08"=>"Agustus",
-                "09"=>"September",
-                "10"=>"Oktober",
-                "11"=>"November",
-                "12"=>"Desember"
-			);
-		$tanggal=date('d-m-Y');
-		$arrayTanggal= explode("-",$tanggal);
-		$arrayTanggal[1]=$tgl[$arrayTanggal[1]];
-        $tanggal=implode ("  ",$arrayTanggal);
-        return $tanggal;
 	}
 }

@@ -9,7 +9,7 @@
 
 <div class="container">
   
-  <div class="well"><p style="text-align:center">List Mahasiswa Peserta Tutorial</p><br><?php echo $hari.", ".$tanggal;?></div>
+  <div class="well"><p style="text-align:center">List Mahasiswa Peserta Tutorial</p><br><?php echo $hari.", ".date('d-m-Y');?></div>
   
 </div>
 
