@@ -22,25 +22,25 @@
 	<body>
 		<div class="container" id="test">
 			<div class="panel panel-info">
-				<div class="panel-heading" id="judul">Input Matakuliah Yang Diambil</div>
+				<div class="panel-heading" id="judul">Penutor Pengajar Matakuliah</div>
 				<div class="panel-body" id="isi">
 					
-					  <form role="form" id="inputMK">
+					  <form role="form" id="MKTutor">
 						<div class="form-group">
-						   <label for="sel1">Nama Mahasiswa</label>
+						   <label for="sel1">Nama Penutor</label>
 						
-							  <select class="form-control" id="namaMahasiswa" name="namaMahasiswa">
-								<option id="mhs1" name="namaMhs1">Pratomo Adi Atmaji</option>
-								<option id="mhs2" name="namaMhs2">Kenny Everest Karnama</option>
-								<option id="mhs3" name="namaMhs3">Zafitra Ramadani</option>
-								<option id="mhs4" name="namaMhs4">Halimatuz Zuhriyah</option>
+							  <select class="form-control" id="namaPenutor" name="namaPenutor">
+								<option id="penutor1" name="nama1">Pratomo Adi Atmaji</option>
+								<option id="penutor2" name="nama2">Kenny Everest Karnama</option>
+								<option id="penutor3" name="nama3">Zafitra Ramadani</option>
+								<option id="penutor4" name="nama4">Halimatuz Zuhriyah</option>
 							  </select>
 							  
 						</div>
 						<div class="form-group">
-						  <label for="pwd">Mata Kuliah Yang Diambil:</label>
+						  <label for="mk">Mata Kuliah Yang Diajar:</label>
 						  <form role="form">
-							<div class="checkbox" id="matkulAmbil" name="checkboxMatkul">
+							<div class="checkbox" id="matkulTutor" name="checkboxMatkul">
 							  <label><input type="checkbox" id="alpro" name="alpro" value="">Algoritma dan Pemrograman</label>
 							</div>
 							<div class="checkbox">
