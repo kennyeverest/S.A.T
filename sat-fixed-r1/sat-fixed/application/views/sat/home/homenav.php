@@ -28,6 +28,7 @@
           <li><a href="<?php echo base_url()?>index.php/inputmhs">Input Mahasiswa</a></li>
           <li><a href="<?php echo base_url()?>index.php/inputmk">Input Mata Kuliah</a></li>
           <li><a href="<?php echo base_url()?>index.php/inputpenutor">Input Penutor</a></li>
+          <li><a href="<?php echo base_url()?>index.php/viewinputambilmk">Input Pengambilan Mata Kuliah</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
@@ -43,4 +44,3 @@
     </ul>
   </div>
 </nav>
-  

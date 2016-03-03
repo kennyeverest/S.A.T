@@ -29,6 +29,7 @@
           <li><a href="<?php echo base_url()?>index.php/inputmhs">Input Mahasiswa</a></li>
           <li><a href=" <?php echo base_url()?>index.php/inputmk">Input Mata Kuliah</a></li>
           <li><a href="<?php echo base_url()?>index.php/inputpenutor">Input Penutor</a></li>
+          <li><a href="<?php echo base_url()?>index.php/viewinputambilmk">Input Pengambilan Mata Kuliah</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">View<span class="caret"></span></a>
@@ -44,7 +45,7 @@
     </ul>
   </div>
 </nav>
-  
+
 <div class="container">
  <br>
   ; <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
@@ -73,7 +74,7 @@
           <p>Mengisi Data-Data Mahasiswa, Mata Kuliah Tutorial dan Penutor.</p>
         </div>
       </div>
-    
+
 		<div class="item">
         <img src="<?php echo base_url('assets/img/sharingidea.jpg'); ?>" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
@@ -81,10 +82,10 @@
           <p>Melihat Data-Data Mahasiswa, Absensi dan Penutor Mata Kuliah.</p>
         </div>
       </div>
-   
+
     </div>
 
-    
+
   </div>
 </div>
 
