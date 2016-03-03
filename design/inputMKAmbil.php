@@ -29,37 +29,37 @@
 						<div class="form-group">
 						   <label for="sel1">Nama Mahasiswa</label>
 						
-							  <select class="form-control" id="namaMahasiswa" name="namaMahasiswa">
-								<option id="mhs1" name="namaMhs1">Pratomo Adi Atmaji</option>
-								<option id="mhs2" name="namaMhs2">Kenny Everest Karnama</option>
-								<option id="mhs3" name="namaMhs3">Zafitra Ramadani</option>
-								<option id="mhs4" name="namaMhs4">Halimatuz Zuhriyah</option>
+							  <select class="form-control" id="namaMahasiswa">
+								<option>Pratomo Adi Atmaji</option>
+								<option>Kenny Everest Karnama</option>
+								<option>Zafitra Ramadani</option>
+								<option>Halimatuz Zuhriyah</option>
 							  </select>
 							  
 						</div>
 						<div class="form-group">
 						  <label for="pwd">Mata Kuliah Yang Diambil:</label>
 						  <form role="form">
-							<div class="checkbox" id="matkulAmbil" name="checkboxMatkul">
-							  <label><input type="checkbox" id="alpro" name="alpro" value="">Algoritma dan Pemrograman</label>
+							<div class="checkbox">
+							  <label><input type="checkbox" value="">Algoritma dan Pemrograman</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" name="mk2"id="kalkulus" name="kalkulus" value="">Kalkulus</label>
+							  <label><input type="checkbox" value="">Kalkulus</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" id="strukdat" name="strukdat" value="">Struktur Data</label>
+							  <label><input type="checkbox" value="">Struktur Data</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" id="mtl" name="mtl" value="">Matriks dan Transformasi Linear</label>
+							  <label><input type="checkbox" value="">Matriks dan Transformasi Linear</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" id="strukdat" name="strukdat" value="">Statistika Dasar</label>
+							  <label><input type="checkbox" value="">Statistika Dasar</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" id="sistemBasisData" name="strukdat" value="sistemBasisData">Sistem Basis Data</label>
+							  <label><input type="checkbox" value="">Sistem Basis Data</label>
 							</div>
 							<div class="checkbox">
-							  <label><input type="checkbox" id="pbi" name="pbi"="">Pemrograman Berbasis Internet</label>
+							  <label><input type="checkbox" value="">Pemrograman Berbasis Internet</label>
 							</div>
 						  </form>
 						</div>
