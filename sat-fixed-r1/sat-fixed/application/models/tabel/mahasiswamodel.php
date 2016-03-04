@@ -42,4 +42,21 @@ public function getLogin_Info()
 	return $hasil;
 }
 
+public function getAdmin()
+{
+	# code...
+	$sql = 'SELECT nim,nama,angkatan FROM mahasiswa WHERE is_admin = 1';
+	$hasil = $this->db->query($sql);
+	return $hasil;
+}
+
+public function getAngkatan($num)
+{
+	# code...
+	$sql = 'SELECT nim,nama,angkatan FROM mahasiswa WHERE angkatan = '.$num;
+	$hasil = $this->db->query($sql);
+	return $hasil;
+
+}
+
 }

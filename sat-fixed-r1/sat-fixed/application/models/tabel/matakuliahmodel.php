@@ -29,6 +29,7 @@ class MataKuliahModel extends CI_Model
 		return $hasil->num_rows();
 	}
 
+
 public function getTet()
 {
 	# code...

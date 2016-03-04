@@ -41,6 +41,14 @@
 
 		 </div>
 
+<br>
+<div class="tahun">
+<input type="text" class="form-control" name="angkatan" id="angkatan" placeholder="Angkatan" required autofocus>
+</div>
+
+<br>
+
+
 <div class="tombol">
             <input type="submit" name="submit" value="click me">
 </div>
@@ -49,16 +57,10 @@
 
 		  </div>
 		  </div>
-
-
 		 </div>
 		 </div>
 		 </form>
-
-
 					  </div>
-
-
 				<div class="panel-footer" id="footer"></div>
 
 			</div>
