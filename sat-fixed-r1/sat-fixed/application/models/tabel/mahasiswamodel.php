@@ -26,6 +26,7 @@ public function getSimpleTabel()
 	$hasil = $this->db->query($sql);
 	return $hasil;
 }
+
 	public function insert($data)
 	{
 		$this->db->insert('mahasiswa',$data);
@@ -33,6 +34,12 @@ public function getSimpleTabel()
 		return $this->db->affected_rows();
 	}
 
-
+public function getLogin_Info()
+{
+	# code...
+	$sql = 'SELECT nim,password FROM mahasiswa';
+	$hasil = $this->db->query($sql);
+	return $hasil;
+}
 
 }

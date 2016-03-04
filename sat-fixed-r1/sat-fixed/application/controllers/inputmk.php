@@ -13,11 +13,11 @@ class InputMK extends CI_Controller
 	public function index()
 	{
 
-		$kode = $this->input->post('kodemk');
+
 		$namamk = $this->input->post('mk');
 		$data['aksi'] = 'inputmk';
 		$data['flag'] = 0;
-		if(empty($kode) || empty($namamk))
+		if(empty($namamk))
 
 		{
 			$this->load->view('/sat/home/homenav');
@@ -26,10 +26,12 @@ class InputMK extends CI_Controller
 
 		else
 		{
-			$tmp['id_mk'] = $kode;
+			$this->load->model('/tabel/matakuliahmodel');
+			$start = $this->matakuliahmodel->getNumRows();
+			$tmp['id_mk'] = $start+1;
 			$tmp['nama_mk'] = $namamk;
 			$tmp['is_deleted'] = 0;
-			
+
 			$this->insertTo_MK($tmp);
 		}
 

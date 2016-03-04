@@ -24,7 +24,8 @@ class ViewMhs extends CI_Controller
 		$data['tabel'] = $tabel;
 		$data['hari']= $this->hari(date('w'));
 		$this->load->view('/sat/home/homenav');
-		$this->load->view('/sat/output/viewmhs',$data);
+		//$this->load->view('/sat/output/viewmhs',$data);
+		$this->load->view('sat/output/mhs/viewmhs');
 	}
 	public function hari ($hari=-1)
 	{

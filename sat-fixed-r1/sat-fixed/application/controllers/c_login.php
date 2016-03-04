@@ -21,8 +21,8 @@ class c_login extends CI_Controller
 		{
 
 			  	$this->load->model('/login/login_baru');
-			  	$this->load->model('/tabel/Penutor');
-			  	$hasil = $this->Penutor->getLogin_Info();
+			  	$this->load->model('/tabel/mahasiswamodel');
+			  	$hasil = $this->mahasiswamodel->getLogin_Info();
 			  	$data = $this->login_baru->formUser();
 			  	$data['aksi']='c_login';
 			  	$username = $data['nim']['value'];
@@ -52,7 +52,7 @@ class c_login extends CI_Controller
 			  		{
 							$this->session->set_userdata("username",$username);
 			  			redirect('home');
-			  			
+
 			  		}
 
 
@@ -66,7 +66,7 @@ class c_login extends CI_Controller
 		{
 			foreach ($hasil->result_array() as $row) {
 			 	 // loop through values
-			 	 if(strcmp($row['nim_penutor'],$username)==0&&strcmp($row['password'],$password)==0)
+			 	 if(strcmp($row['nim'],$username)==0&&strcmp($row['password'],$password)==0)
 			 	{
 			 		return true;
 			 	}

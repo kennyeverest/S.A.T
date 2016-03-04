@@ -47,9 +47,7 @@
               }
                 ?>
 
-              <div class="checkbox">
-							  <label><input type="checkbox" value="">Algoritma dan Pemrograman</label>
-							</div>
+              
 
 						</div>
             <br>

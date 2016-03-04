@@ -18,7 +18,7 @@ class ViewMk extends CI_Controller
 		$hasil = $this->matakuliahmodel->getTet();
 		$atur = array( 'table_open' => '<table  class="table table-striped table-condensed"  cellpadding="5" cellspacing="0">',
 		'cell_start' => '<td style="width:10%">' );
-		$this->table->set_heading('Kode Mata Kuliah', 'Nama Mata Kuliah');
+		$this->table->set_heading('Id Mata Kuliah', 'Nama Mata Kuliah');
 		$this->table->set_template($atur);
 		$tabel = $this->table->generate($hasil);
 		$data['tabel'] = $tabel;

@@ -16,15 +16,23 @@ class MataKuliahModel extends CI_Model
 
 	public function getAll()
 	{
-		$sql = 'SELECT * FROM mata_kuliah';
+		$sql = 'SELECT * FROM mata_kuliah ORDER BY id_mk ASC';
 		$hasil = $this->db->query($sql);
 		return $hasil;
+	}
+
+	public function getNumRows()
+	{
+		# code...
+		$sql = 'SELECT * FROM mata_kuliah';
+		$hasil = $this->db->query($sql);
+		return $hasil->num_rows();
 	}
 
 public function getTet()
 {
 	# code...
-	$sql = 'SELECT id_mk, nama_mk FROM mata_kuliah';
+	$sql = 'SELECT id_mk, nama_mk FROM mata_kuliah ORDER BY id_mk ASC';
 	$hasil = $this->db->query($sql);
 	return $hasil;
 }
