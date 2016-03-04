@@ -3,11 +3,11 @@ Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 
 #hirarki singkat
 1. Untuk Folder sat-fixed, folder ini memuat sistem sat versi awal (belum terjadi perubahan database)
-2. Untuk Folder sat-fixed=r1, folder ini memuat sistem sat versi pengembangan (implementasi perubahan database)
+2. Untuk Folder sat-fixed-r1, folder ini memuat sistem sat versi pengembangan (implementasi perubahan database) (suggested bingits)
 
 #Panduan install :
 
-1. Sebelumnya, import dulu script sql
+1. Sebelumnya, import dulu script sql (sat_fixed.sql)
 
 2. Buka file Pentutor.php (sat-fixed/applications/models/)
 
@@ -29,3 +29,10 @@ Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 4. Copy folder sat-fixed ke directory htdocs
 
 5. Buka browser, ketik url : localhost/sat-fixed/
+
+#Developer
+
+1. Kenny Karnama
+2. Halimatuz Zuhriyah
+3. Zafitra Ramadani
+4. Pratomo Adi Atmaji
