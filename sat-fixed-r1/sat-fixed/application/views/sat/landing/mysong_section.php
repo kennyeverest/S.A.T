@@ -8,13 +8,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
-                
+
+                    <p>S.A.T atau Sistem Absensi Tutorial adalah sebuah sistem sederhana untuk melakukan perekaman elektronik dan pengolahan sederhana
+                        pada data absensi tutorial. Dikembangkan dalam bahasa pemrograman PHP menggunakan framework CI
+                        dengan lisensi Open Source.
+                    </p>
+
+
             </div>
         </div>
     </section>

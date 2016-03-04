@@ -3,11 +3,11 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>Asrama Putra, Kampus C UNAIR <br>Mulyorejo, Surabaya</p>
+                    <div class="footer-col col-md-6">
+                        <h3>Universitas Airlangga</h3>
+                        <p>Fakultas Sains dan Teknologi <br>Kampus C Mulyorejo, Surabaya</p>
                     </div>
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-6">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
@@ -27,10 +27,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Me!</h3>
-                        <p>This Website is created to view my songs <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -44,7 +41,7 @@
             </div>
         </div>
     </footer>
-    
+
      <!-- jQuery -->
     <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
 
@@ -66,4 +63,3 @@
 </body>
 
 </html>
-
