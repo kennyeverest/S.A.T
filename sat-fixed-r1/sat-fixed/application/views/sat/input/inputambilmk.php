@@ -12,9 +12,23 @@
 	</head>
 	<body>
 
-
     <div class="container " id="test" >
 
+
+			<?php
+			if($flag==2){
+				echo '<div class="alert alert-success">
+			<strong>Success!</strong> Data berhasil disimpan
+			</div>';
+			}
+
+			else if($flag==1){
+				echo '<div class="alert alert-danger">
+				<strong>Error!</strong> Data tidak berhasil disimpan
+			</div>';
+			}
+
+			 ?>
       <div class="panel panel-info">
         <div class="panel-heading" id="judul">Input Mata Kuliah</div>
         <div class="panel-body">
@@ -79,6 +93,12 @@
 
 
 			</div>
+
+			<script>
+			function bersihkan(){
+				location.reload();
+			}
+			</script>
 
 	</body>
 </html>

@@ -22,7 +22,7 @@ class MengambilModel extends CI_Model
   {
     # code...
     $this->db->insert('mengambil',$data);
-    print_r($this->db->error());
+    //print_r($this->db->error());
     return $this->db->affected_rows();
   }
 

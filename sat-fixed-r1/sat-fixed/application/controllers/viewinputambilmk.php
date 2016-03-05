@@ -6,6 +6,7 @@
 class ViewInputAmbilMk extends CI_Controller
 {
 
+
   function __construct()
   {
     # code...
@@ -21,6 +22,7 @@ class ViewInputAmbilMk extends CI_Controller
  public function index()
  {
    # code...
+
    $list_mhs = array();
    $puter = 0;
    $puter2 = 0;
@@ -35,7 +37,7 @@ class ViewInputAmbilMk extends CI_Controller
      $list_mhs[$puter++] = $row['nama'];
      $list_nim[$puter4++] = $row['nim'];
    }
-   $data['list_mhs'] = $list_mhs;
+      $data['list_mhs'] = $list_mhs;
    $data['list_nim'] = $list_nim;
    $list_id = array();
 
@@ -44,9 +46,19 @@ class ViewInputAmbilMk extends CI_Controller
    $list_mk[$puter2++] = $row['nama_mk'];
    $list_nim[$puter3++] = $row['id_mk'];
  }
+ $x = $this->input->post('mhs');
+ $y = $this->input->post('mk');
+ if(empty($x)||empty($y)){
+   $flag = 0;
+ }
+ else{
+   $flag = $this->insertToMengambilMk();
+ }
+
  $data['list_mk'] = $list_mk;
  $data['list_id'] = $list_nim;
- $data['aksi'] = 'viewinputambilmk/tampil';
+ $data['aksi'] = 'viewinputambilmk';
+ $data['flag'] = $flag;
  $this->load->view('/sat/home/homenav');
  $this->load->view('/sat/input/inputambilmk',$data);
 
@@ -67,15 +79,19 @@ public function getDataMk()
   return $hasil;
 }
 
-public function tampil()
+public function insertToMengambilMk()
 {
   # code...
+
   $mhs = $this->input->post('mhs');
   $mk = $this->input->post('mk');
   $datestring = '%Y-%m-%d %h:%i:%s';
   $time = time();
   $tgl_register = mdate($datestring,$time);
 //echo $tgl_register."</br>";
+if(empty($mk)){
+  return 1;
+}
   foreach($mk as $value){
     $data['mahasiswa_nim'] = $mhs;
     $data['mata_kuliah_id_mk'] = $value;
@@ -84,9 +100,13 @@ public function tampil()
     //echo $mhs."</br>";
     $data['is_over'] = 0;
 
-    echo $this->mengambilmodel->insert($data)."</br>";
-
+    $flag =  $this->mengambilmodel->insert($data);
+    if($flag==0){
+      return 1;
+    }
   }
+return 2;
+
 
 
 
