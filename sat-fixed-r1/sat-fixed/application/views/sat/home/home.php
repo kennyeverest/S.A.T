@@ -60,15 +60,15 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="<?php echo base_url('assets/img/welcomeSAT.jpg'); ?>" alt="Chania" width="460" height="345">
+        <img src="<?php echo base_url('assets/img/home.jpg'); ?>" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>Sistem Absen Tutorial</h3>
-          <p>Sistem Absensi Tutorial oleh Himsi Unair Bidang Keilmuan khususnya 3V.</p>
+         
+          
         </div>
       </div>
 
       <div class="item">
-        <img src="<?php echo base_url('assets/img/einstein.jpg'); ?>" alt="Chania" width="460" height="345">
+        <img src="<?php echo base_url('assets/img/3.jpg'); ?>" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
           <h3>Input</h3>
           <p>Mengisi Data-Data Mahasiswa, Mata Kuliah Tutorial dan Penutor.</p>
@@ -76,10 +76,10 @@
       </div>
 
 		<div class="item">
-        <img src="<?php echo base_url('assets/img/sharingidea.jpg'); ?>" alt="Chania" width="460" height="345">
+        <img src="<?php echo base_url('assets/img/5.jpg'); ?>" alt="Chania" width="460" height="345">
         <div class="carousel-caption">
-          <h3>View</h3>
-          <p>Melihat Data-Data Mahasiswa, Absensi dan Penutor Mata Kuliah.</p>
+          <h3 style color:black >View</h3>
+          <p style color:black >Melihat Data-Data Mahasiswa, Absensi dan Penutor Mata Kuliah.</p> 
         </div>
       </div>
 
