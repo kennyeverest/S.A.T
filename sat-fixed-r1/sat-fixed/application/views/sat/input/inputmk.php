@@ -41,9 +41,10 @@ margin: auto;
 
 		<div class="form-group clearfix" >
 
-		
+
 		<input type="text" class="form-control" name="mk" id="mk" placeholder="Nama Mata Kuliah" required autofocus>
 		<br>
+
 		<div class="row">
 		<div class="col-sm-3"></div>
 
@@ -66,7 +67,7 @@ margin: auto;
 
   	if($flag==2)
   	echo '<div class="alert alert-success">
-  <strong>Success!</strong> Data berhasil disimpan
+  <strong>Success!</strong> Mata Kuliah '.$recently.' berhasil ditambahkan
 </div>';
 
 	else if($flag==1)

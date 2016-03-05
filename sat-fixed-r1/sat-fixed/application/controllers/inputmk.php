@@ -8,6 +8,7 @@ class InputMK extends CI_Controller
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->helper('html');
+		$this->load->helper('date');
 	}
 
 	public function index()
@@ -31,13 +32,12 @@ class InputMK extends CI_Controller
 			$tmp['id_mk'] = $start+1;
 			$tmp['nama_mk'] = $namamk;
 			$tmp['is_deleted'] = 0;
-
-			$this->insertTo_MK($tmp);
+			$this->insertTo_MK($tmp,$namamk);
 		}
 
 	}
 
-	public function insertTo_MK($data)
+	public function insertTo_MK($data,$namamk)
 	{
 		//echo $data['pesan'];
 		$this->load->model('/tabel/matakuliahmodel');
@@ -51,6 +51,7 @@ class InputMK extends CI_Controller
 
 		$data['aksi'] = 'inputmk';
 		$data['flag'] = $flag;
+		$data['recently'] = $namamk;
 		$this->load->view('/sat/home/homenav');
 		$this->load->view('/sat/input/inputmk',$data);
 	}

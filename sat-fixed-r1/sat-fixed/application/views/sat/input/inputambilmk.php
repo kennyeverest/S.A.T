@@ -25,13 +25,20 @@
     	<div class="col-sm-4" ></div>
     	<div class="col-sm-4" style="padding:30px">
 
-					  <form role="form" id="inputMK">
+				<?php
+				$attribute = array( 'class' => 'form-horizontal',
+							 'role' => 'form');
+				echo form_open($aksi,$attribute);
+				?>
 						<div class="form-group">
 						   <label for="sel1">Nama Mahasiswa</label>
 
-							 <select class="form-control" id="namaMahasiswa">
-                 <?php foreach ($list_mhs as $row){
-                   echo "<option>".$row."</option>";
+							 <select class="form-control" id="mhs" name="mhs">
+                 <?php
+								 $puter2=0;
+								 foreach ($list_mhs as $row){
+                   echo '<option value="'.$list_nim[$puter2].'">'.$row.'</option>';
+									 $puter2++;
                  }
 
                    ?>
@@ -42,12 +49,16 @@
 						<div class="form-group">
 						  <label for="pwd">Mata Kuliah Yang Diambil:</label>
 
-              <?php foreach ($list_mk as $help){
-                echo '<div class="checkbox"> <label><input type="checkbox" value="1">'.$help."</label>"."</div>";
-              }
+              <?php
+							$puter = 0;
+							foreach ($list_mk as $help){
+
+                echo '<div class="checkbox"> <label><input type="checkbox" name="mk[]" id="mk" value="'.$list_id[$puter].'">'.$help."</label>"."</div>";
+								$puter++;
+							}
                 ?>
 
-              
+
 
 						</div>
             <br>
