@@ -38,6 +38,11 @@
           <li><a href="<?php echo base_url()?>index.php/viewmk">Data Mata Kuliah</a></li>
         </ul>
       </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Edit<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<?php echo base_url()?>index.php/editmhs">Edit Mahasiswa</a></li>
+        </ul>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="<?php echo base_url();?>index.php/c_login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>

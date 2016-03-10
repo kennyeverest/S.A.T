@@ -9,7 +9,7 @@ class MahasiswaModel extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "sat";
 		$config['username'] = 'root';
-		$config['password'] = 'kenny';
+		$config['password'] = '';
 		$this->load->database($config);
 	}
 
@@ -57,6 +57,19 @@ public function getAngkatan($num)
 	$hasil = $this->db->query($sql);
 	return $hasil;
 
+}
+public function getDataMhs($Nim){
+	$sql = 'SELECT nim,nama,angkatan,no_hp,email FROM mahasiswa WHERE nim = '.$Nim;
+	$hasil = $this->db->query($sql);
+	if ($hasil->num_rows() > 0) 
+	return $hasil->result();
+    else
+    	return false;
+}
+public function updateMhs($data, $nim){
+	$this->db->where('nim', $nim);
+    $hasil=$this->db->update('mahasiswa', $data); 
+    return $hasil;
 }
 
 }

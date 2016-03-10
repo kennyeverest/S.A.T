@@ -16,7 +16,7 @@
     filter: alpha(opacity=60);
 	}
 .tengah{
-  margin: auto;
+     margin: auto;
      position: absolute;
      top: 0; left: 0; bottom: 0; right: 0;
      height: 300px;	
