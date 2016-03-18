@@ -47,7 +47,6 @@
 					  </div>
 
 				
-				<div class="panel-footer" id="footer"></div>
 			
 			</div>
 	</div>

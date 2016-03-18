@@ -30,6 +30,11 @@ Project untuk sistem absensi tutor HIMSI bidang Keilmuan
 
 5. Buka browser, ketik url : localhost/sat-fixed/
 
+*Catatan :
+1. Mengerjakan controller c_php_excel_class.php untuk mencetak absen mahasiswa yang ikut tutorial
+2. Controller c_php_excel_class.php belum pada view yang tepat (seharusnya berada di viewabsen.php)
+3. 
+
 #Developer
 
 1. Kenny Karnama

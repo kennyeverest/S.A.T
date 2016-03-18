@@ -9,7 +9,7 @@ class MataKuliahModel extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "sat";
 		$config['username'] = 'root';
-		$config['password'] = 'kenny';
+		$config['password'] = '';
 
 		$this->load->database($config);
 	}

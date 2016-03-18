@@ -73,3 +73,5 @@ public function updateMhs($data, $nim){
 }
 
 }
+
+
