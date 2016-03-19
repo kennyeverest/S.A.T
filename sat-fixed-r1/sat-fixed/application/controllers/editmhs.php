@@ -67,7 +67,6 @@ class EditMhs extends CI_Controller
         	$data['flag'] = 1;
 	    }
 	    $data['hasil']=array ();
-        $data['aksi'] = '';
        	$data['dis']="";
 	    $data['aksi'] = 'editmhs/update';
 	    $this->load->view('/sat/home/homenav');

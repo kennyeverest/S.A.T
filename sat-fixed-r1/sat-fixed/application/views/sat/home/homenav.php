@@ -41,6 +41,9 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Edit<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="<?php echo base_url()?>index.php/editmhs">Edit Mahasiswa</a></li>
+          <li><a href="<?php echo base_url()?>index.php/">Edit MK</a></li>
+           <li><a href="<?php echo base_url()?>index.php/editPenutor">Edit Penutor</a></li>
+          <li><a href="<?php echo base_url()?>index.php/editmengambilmk">Edit Pengambilan MK</a></li>
         </ul>
       </li>
     </ul>

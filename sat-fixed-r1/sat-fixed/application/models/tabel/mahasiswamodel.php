@@ -59,7 +59,7 @@ public function getAngkatan($num)
 
 }
 public function getDataMhs($Nim){
-	$sql = 'SELECT nim,nama,angkatan,no_hp,email FROM mahasiswa WHERE nim = '.$Nim;
+	$sql = 'SELECT nim,nama,angkatan,no_hp,email,is_penutor FROM mahasiswa WHERE nim = '.$Nim;
 	$hasil = $this->db->query($sql);
 	if ($hasil->num_rows() > 0) 
 	return $hasil->result();
@@ -72,6 +72,5 @@ public function updateMhs($data, $nim){
     return $hasil;
 }
 
+
 }
-
-

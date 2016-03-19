@@ -28,15 +28,9 @@
 <div class="col-sm-6"></div>
 
 <div class="col-sm-6">
-	<button type="button" class="btn btn-success" onclick="cetak()">
+	<button type="button" class="btn btn-success">
     <span class="glyphicon glyphicon-print"></span> Cetak!
   </button>
-  
-  <script type="text/javascript">
-    function cetak() {
-            window.location.href = "<?php echo site_url('/c_php_excel_class');?>";
-        }
-</script>
 </div>
 
 	</body>
