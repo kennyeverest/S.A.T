@@ -1,5 +1,5 @@
 ------------------------USER GUIDE--------------------
----------------------------------------------------
+------------------------------------------------------
 sebelum menggunakan sistem S.A.T ikuti petunjuk pengisian awal secara runtut
 
 1. Admin login ke dalam sistem
