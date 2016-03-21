@@ -1,0 +1,17 @@
+--------------------USER GUIDE--------------------
+---------------------------------------------------
+sebelum menggunakan sistem S.A.T ikuti petunjuk pengisian awal secara runtut
+
+1. Admin login ke dalam sistem
+2. Menginputkan mahasiswa yang akan mengikuti tutor dengan mengisi: nim, nama mahasiswa, angkatan, no handphone, email.
+3. Menginputkan mata kuliah yang ditutorkan.
+4. Menginputkan penutor : nim, nama, amgkatan, no handphone, email.
+5. Menginputkan pengambilan mata kuliah.
+
+
+VIEW DATA MAHASISWA : untuk melihat mahasiswa yang terdaftar mengikuti tutor HIMSI
+
+VIEW DATA ABSENSI : untuk melihat rekam absensi tutor HIMSI
+
+VIEW DATA MATA KULIAH YANG DIAMBIL: untuk melihat mata kuliah yang ditutorkan
+
