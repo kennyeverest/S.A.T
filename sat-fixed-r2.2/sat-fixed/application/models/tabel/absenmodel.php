@@ -9,7 +9,7 @@ class AbsenModel extends CI_Model
 		$config['dbdriver'] = "mysqli";
 		$config['database'] = "sat";
 		$config['username'] = 'root';
-		$config['password'] = 'kenny';
+		$config['password'] = '';
 		$this->load->database($config);
   }
 
@@ -21,4 +21,13 @@ class AbsenModel extends CI_Model
 		return $this->db->affected_rows();
   }
 
+  
+  public function menampilkanAbsenMk($mk)
+  {
+	  #code...
+	  $sql= 'SELECT Mahasiswa_nim, nama FROM `mengambil`, mahasiswa WHERE mengambil.Mahasiswa_nim=mahasiswa.nim and mengambil.Mata_Kuliah_id_mk='.$mk;
+	  $hasil = $this->db->query($sql);
+	  return $hasil;
+  }
+  
 }
